@@ -12,7 +12,7 @@
 async function init()  {
 const headers = {'Content-Type':'application/json',
                     'Access-Control-Allow-Origin':'*',
-                    'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'}\
+                    'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'}
   let req2 = await fetch("https://yearbookavenue.jostens.com/imagelibraryservices/imagelibrary/imagelist?categoryId=47613829&verbose=false&x=1727307041210")
   let bod = await req2.json()
   console.log(bod)
