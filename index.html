@@ -8,23 +8,23 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <script>
-async function init()  {
-const headers = {'Content-Type':'application/json',
-                    'Access-Control-Allow-Origin':'*',
-                    'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'}
-  let req2 = await fetch("https://yearbookavenue.jostens.com/imagelibraryservices/imagelibrary/imagelist?categoryId=47613829&verbose=false&x=1727307041210")
-  let bod = await req2.json()
-  console.log(bod)
-let req = await fetch("https://yearbookavenue.jostens.com/imagelibraryservices/imagelibrary/saveimagedetail?x=1727305814760", {
-method: "POST",
-body: JSON.stringify({id: 2434076249, description: "yes!!", indexFlag: true, imageFlowCode: "USE_PHOTO"}),
-headers: headers
-})
-let body = await req.json()
-console.log(body)
-}
-init()
+<iframe src="https://jostens.com" style="width:500px; height: 300px;">
+
+<script>
+  const iframe = document.getElementById('myIframe');
+
+  /*iframe.onload = () => {
+    const contentWindow = iframe.contentWindow;
+    contentWindow.fetch('https://yearbookavenue.jostens.com/imagelibraryservices/imagelibrary/imagelist?categoryId=47613829&verbose=false&x=1727316025676')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  };*/
+</script>
 </script>
   </body>
 </html>
